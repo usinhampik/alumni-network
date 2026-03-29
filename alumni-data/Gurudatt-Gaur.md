@@ -9,9 +9,4 @@
 - **Email**: gurudatt.gaur@sxca.edu.in
 - **LinkedIn**: 
 - **Research Interests**: Theoretical Plasma Physics, Gravitational Wave Astronomy
-- **Brief Bio**:
-
-## Instructions
-1. Replace the placeholder text with your information in each field.
-2. Save the file as your name or a unique identifier.
-3. Submit your completed profile to the alumni network.
+- **Brief Bio**: I comppleted my PhD from IPR, Gandhinagar in 2013. I did my BSc and MSc from AMU, Aligarh, Before joining Xavier's in 2022, I did a postdoc at IPR and worked as an Assistant Profeesor at IAR, Gandhinagar
