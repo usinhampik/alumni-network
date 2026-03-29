@@ -1,14 +1,14 @@
 # Alumni Profile Template
 
 ## Fields
-- **Name**:
-- **Batch Year**:
-- **Current Position**:
-- **Organization**:
-- **Location**:
-- **Email**:
-- **LinkedIn**:
-- **Research Interests**:
+- **Name**: Gurudatt Gaur
+- **Batch Year**: 2006
+- **Current Position**: Assiatnt Professor
+- **Organization**: St Xavier's College (Autonomous), Ahmedabad
+- **Location**: Gujarat, India
+- **Email**: gurudatt.gaur@sxca.edu.in
+- **LinkedIn**: 
+- **Research Interests**: Theoretical Plasma Physics, Gravitational Wave Astronomy
 - **Brief Bio**:
 
 ## Instructions
