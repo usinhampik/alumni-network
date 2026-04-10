@@ -1,6 +1,6 @@
 # Alumni Profiles
 
-This section publishes alumni information that is maintained in the repository.
+This section is generated automatically from the Markdown files in `alumni-data/`.
 
 ## Available Profiles
 
@@ -9,5 +9,3 @@ This section publishes alumni information that is maintained in the repository.
 ## Template
 
 - [Profile Template](template.md)
-
-The source records currently live in `alumni-data/`. If you want, this can be automated later so profile pages are generated from those source files during CI.
