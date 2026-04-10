@@ -1,17 +1,22 @@
 name: Deploy MkDocs to GitHub Pages
 
 on:
+  # Build on every branch push so contributors get a preview check in Actions.
   push:
     branches:
       - "**"
+  # Build on pull requests as an additional validation step.
   pull_request:
+  # Allow maintainers to trigger the workflow manually from the Actions tab.
   workflow_dispatch:
 
+# Required for uploading and deploying a GitHub Pages artifact.
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Only keep the newest Pages run active for a given branch/ref.
 concurrency:
   group: github-pages
   cancel-in-progress: true
@@ -20,24 +25,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Get the repository content so MkDocs can read docs/ and alumni-data/.
       - name: Check out repository
         uses: actions/checkout@v4
 
+      # Keep the Python runtime explicit so builds are reproducible.
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      # MkDocs is the only required dependency in the current setup.
       - name: Install MkDocs
         run: pip install mkdocs
 
+      # The MkDocs hook in scripts/generate_alumni_docs.py regenerates docs/alumni/
+      # from alumni-data/ before the site is built.
       - name: Build site
         run: mkdocs build --strict --site-dir site
 
+      # Pages-specific steps only run for the main branch.
       - name: Configure GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v5
 
+      # Upload the built static site so the deploy job can publish it.
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
@@ -45,6 +57,7 @@ jobs:
           path: site
 
   deploy:
+    # Only main branch pushes should publish the live website.
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment:
       name: github-pages
@@ -52,6 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # Publish the uploaded artifact to GitHub Pages.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
