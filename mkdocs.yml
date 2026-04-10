@@ -6,6 +6,8 @@ repo_name: alumni-network
 docs_dir: docs
 site_dir: site
 use_directory_urls: true
+hooks:
+  - scripts/generate_alumni_docs.py
 exclude_docs: |
   _config.yml
 
@@ -22,5 +24,4 @@ nav:
   - Contact: contact.md
   - Alumni Profiles:
       - Overview: alumni/index.md
-      - Gurudatt Gaur: alumni/gurudatt-gaur.md
       - Profile Template: alumni/template.md
