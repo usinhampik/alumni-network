@@ -10,8 +10,9 @@ The Alumni Network aims to create a vibrant and engaging platform where former m
 - Organizing events and reunions
 
 ## Key Sections
+- [Alumni Directory](directory.md): Learn how alumni profiles are organized and maintained.
 - [Events](events.md): Stay updated on upcoming alumni events and reunions.
-- [Mentorship](mentorship.md): Learn about our mentorship programs and how to get involved.
 - [Resources](resources.md): Access valuable resources and job opportunities shared by fellow alumni.
+- [Contact](contact.md): Reach out to the alumni network team.
 
 Thank you for being a part of our alumni community! We look forward to your active participation and contributions.

@@ -1,0 +1,27 @@
+site_name: IPR Alumni Network
+site_description: Official site for the IPR Alumni Network
+site_url: ""
+repo_url: https://github.com/usinhampik/alumni-network
+repo_name: alumni-network
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+hooks:
+  - scripts/generate_alumni_docs.py
+exclude_docs: |
+  _config.yml
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: index.md
+  - Directory: directory.md
+  - Events: events.md
+  - News: news.md
+  - Resources: resources.md
+  - Documents: documents.md
+  - Contact: contact.md
+  - Alumni Profiles:
+      - Overview: alumni/index.md
+      - Profile Template: alumni/template.md
